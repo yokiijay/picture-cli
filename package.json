@@ -1,0 +1,38 @@
+{
+  "name": "picture-cli",
+  "version": "0.0.1",
+  "main": "src/app.js",
+  "description": "An generator for random picture",
+  "author": "Yokiijay <yokiijay@gmail.com> (https://yokiijay.github.io)",
+  "homepage": "https://github.com/yokiijay",
+  "repository": {
+    "url": "https://github.com/yokiijay/picture-cli"
+  },
+  "keywords": [
+    "picture",
+    "generator",
+    "cli",
+    "node"
+  ],
+  "license": "MIT",
+  "files": [
+    "src/*"
+  ],
+  "bin": {
+    "picture": "./src/app.js"
+  },
+  "scripts": {
+    "start": "node ./src/app.js"
+  },
+  "dependencies": {
+    "chalk": "^4.0.0",
+    "clipboardy": "^2.3.0",
+    "commander": "^5.1.0",
+    "configstore": "^5.0.1",
+    "enquirer": "^2.3.5",
+    "node-fetch": "^2.6.0",
+    "ora": "^4.0.4",
+    "prompts": "^2.3.2",
+    "signale": "^1.4.0"
+  }
+}
