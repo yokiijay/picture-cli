@@ -9,7 +9,7 @@ config:
   
   # Specify the current working directory path
   # the default is the current working directory path
-  cwd: /Users/yokiijay/Code/pic-cli
+  cwd: /Users/yokiijay/Code/picture-cli
   
   # Export additional ENV variables
   env:
@@ -50,11 +50,10 @@ config:
   # Don't forget to add a backgroundColor style with a null as type
   frameBox:
     type: solid
-    title: 🖥 Super Terminal
+    title: 🖥 Amazing picture-cli
     style:
-      border: 8px blueviolet solid
-      boxShadow: 4px 4px 0 rgb(94, 41, 150)
-      borderRadius: 18px
+      border: 4px blueviolet solid
+      borderRadius: 2px
       # margin: 0px
   
   # Add a watermark image to the rendered gif
