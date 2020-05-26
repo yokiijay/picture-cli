@@ -2,7 +2,7 @@
   "name": "picture-cli",
   "version": "0.0.1",
   "main": "src/app.js",
-  "description": "An generator for random picture",
+  "description": "A generator for random picture",
   "author": "Yokiijay <yokiijay@gmail.com> (https://yokiijay.github.io)",
   "homepage": "https://github.com/yokiijay",
   "repository": {
@@ -10,9 +10,15 @@
   },
   "keywords": [
     "picture",
-    "generator",
     "cli",
-    "node"
+    "picture cli",
+    "generator",
+    "node",
+    "node cli",
+    "img",
+    "html",
+    "photo",
+    "random"
   ],
   "license": "MIT",
   "files": [

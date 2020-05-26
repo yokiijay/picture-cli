@@ -14,7 +14,7 @@
 
 ### DEMO:
 
-![DEMO](https://i.loli.net/2020/05/26/j32ANKMT5DJodSZ.gif)
+<img src="https://i.loli.net/2020/05/26/j32ANKMT5DJodSZ.gif" width="550" align="center" />
 
 ## Install
 `yarn global add @yokiijay/picture-cli`
