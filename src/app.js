@@ -154,7 +154,7 @@ async function generatePictures(count, width, height){
     if(i>=count-1) {
       return handleEnd()
     }else {
-      await delay(10)    
+      await delay(1)
     }
   }
 }
