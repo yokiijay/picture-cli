@@ -1,0 +1,255 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: zsh
+  
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: /Users/yokiijay/Code/picture-cli
+  
+  # Export additional ENV variables
+  env:
+    recording: true
+  
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 60
+  
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 15
+  
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+  
+  # Quality
+  # 1 - 100
+  quality: 60
+  
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+  
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 2000
+  
+  # The surrounding frame box
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+    type: solid
+    title: 🖥 Amazing picture-cli
+    style:
+      border: 4px SPRINGGREEN solid
+      # boxShadow: none
+      # margin: 0px
+  
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+  
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+  
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
+  
+  # The size of the font
+  fontSize: 12
+  
+  # The height of lines
+  lineHeight: 1
+  
+  # The spacing between letters
+  letterSpacing: 0
+  
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+  
+# Records, feel free to edit them
+records:
+  - delay: 604
+    content: "\e]2;yokiijay@Macbook: ~/Code/picture-cli\a\e]1;..e/picture-cli\a"
+  - delay: 28
+    content: "\r\e[0m\e[27m\e[24m\e[J \e[36mpicture-cli\e[00m \e[01;34m\e[31mmaster\e[34m \e[33m✗\e[00m \e[01;32m➜ \e[K\e[?1h\e=\e[?2004h"
+  - delay: 840
+    content: p
+  - delay: 190
+    content: "\bpi"
+  - delay: 83
+    content: c
+  - delay: 235
+    content: t
+  - delay: 116
+    content: u
+  - delay: 98
+    content: r
+  - delay: 79
+    content: e
+  - delay: 461
+    content: "\e[?1l\e>\e[?2004l\r\r\n\e]2;picture\a\e]1;picture\a"
+  - delay: 281
+    content: "\e[?25l\e[36m?\e[39m \e[1m选择一个功能\e[22m \e[90m›\e[39m \e[90m- Use arrow-keys. Return to submit.\e[39m\r\n    随机生成图片\e[90m\e[39m\r\n\e[36m❯\e[39m   \e[36m\e[4m上传图片到线上\e[39m\e[24m\e[90m - 上传后返回一个线上的URL\e[39m\r\n"
+  - delay: 825
+    content: "\e[2K\e[1A\e[2K\e[1A\e[2K\e[1A\e[2K\e[G\e[32m✔\e[39m \e[1m选择一个功能\e[22m \e[90m›\e[39m 上传图片到线上\r\n\e[?25h"
+  - delay: 17
+    content: "\e[2K\e[1G\e[36m?\e[39m \e[1m本地图片路径:\e[22m \e[90m›\e[39m \e7\e8"
+  - delay: 1881
+    content: "\e[2K\e[G\e[2K\e[1G\e[36m?\e[39m \e[1m本地图片路径:\e[22m \e[90m›\e[39m /\e7\e8\e[2K\e[G\e[2K\e[1G\e[36m?\e[39m \e[1m本地图片路径:\e[22m \e[90m›\e[39m /U\e7\e8\e[2K\e[G\e[2K\e[1G\e[36m?\e[39m \e[1m本地图片路径:\e[22m \e[90m›\e[39m /Us\e7\e8\e[2K\e[G\e[2K\e[1G\e[36m?\e[39m \e[1m本地图片路径:\e[22m \e[90m›\e[39m /Use\e7\e8\e[2K\e[G\e[2K\e[1G\e[36m?\e[39m \e[1m本地图片路径:\e[22m \e[90m›\e[39m /User\e7\e8\e[2K\e[G\e[2K\e[1G\e[36m?\e[39m \e[1m本地图片路径:\e[22m \e[90m›\e[39m /Users\e7\e8\e[2K\e[G\e[2K\e[1G\e[36m?\e[39m \e[1m本地图片路径:\e[22m \e[90m›\e[39m /Users/\e7\e8\e[2K\e[G\e[2K\e[1G\e[36m?\e[39m \e[1m本地图片路径:\e[22m \e[90m›\e[39m /Users/y\e7\e8\e[2K\e[G\e[2K\e[1G\e[36m?\e[39m \e[1m本地图片路径:\e[22m \e[90m›\e[39m /Users/yo\e7\e8\e[2K\e[G\e[2K\e[1G\e[36m?\e[39m \e[1m本地图片路径:\e[22m \e[90m›\e[39m /Users/yok\e7\e8\e[2K\e[G\e[2K\e[1G\e[36m?\e[39m \e[1m本地图片路径:\e[22m \e[90m›\e[39m /Users/yoki\e7\e8\e[2K\e[G\e[2K\e[1G\e[36m?\e[39m \e[1m本地图片路径:\e[22m \e[90m›\e[39m /Users/yokii\e7\e8\e[2K\e[G"
+  - delay: 48
+    content: "\e[2K\e[1G\e[36m?\e[39m \e[1m本地图片路径:\e[22m \e[90m›\e[39m /Users/yokiij\e7\e8\e[2K\e[G\e[2K\e[1G\e[36m?\e[39m \e[1m本地图片路径:\e[22m \e[90m›\e[39m /Users/yokiija\e7\e8\e[2K\e[G"
+  - delay: 8
+    content: "\e[2K\e[1G\e[36m?\e[39m \e[1m本地图片路径:\e[22m \e[90m›\e[39m /Users/yokiijay\e7\e8\e[2K\e[G\e[2K\e[1G\e[36m?\e[39m \e[1m本地图片路径:\e[22m \e[90m›\e[39m /Users/yokiijay/\e7\e8\e[2K\e[G\e[2K\e[1G\e[36m?\e[39m \e[1m本地图片路径:\e[22m \e[90m›\e[39m /Users/yokiijay/C\e7\e8\e[2K\e[G\e[2K\e[1G\e[36m?\e[39m \e[1m本地图片路径:\e[22m \e[90m›\e[39m /Users/yokiijay/Co\e7\e8\e[2K\e[G\e[2K\e[1G\e[36m?\e[39m \e[1m本地图片路径:\e[22m \e[90m›\e[39m /Users/yokiijay/Cod\e7\e8\e[2K\e[G\e[2K\e[1G\e[36m?\e[39m \e[1m本地图片路径:\e[22m \e[90m›\e[39m /Users/yokiijay/Code\e7\e8\e[2K\e[G\e[2K\e[1G\e[36m?\e[39m \e[1m本地图片路径:\e[22m \e[90m›\e[39m /Users/yokiijay/Code/\e7\e8\e[2K\e[G\e[2K\e[1G\e[36m?\e[39m \e[1m本地图片路径:\e[22m \e[90m›\e[39m /Users/yokiijay/Code/p\e7\e8\e[2K\e[G\e[2K\e[1G\e[36m?\e[39m \e[1m本地图片路径:\e[22m \e[90m›\e[39m /Users/yokiijay/Code/pi\e7\e8\e[2K\e[G\e[2K\e[1G\e[36m?\e[39m \e[1m本地图片路径:\e[22m \e[90m›\e[39m /Users/yokiijay/Code/pic\e7\e8\e[2K\e[G\e[2K\e[1G\e[36m?\e[39m \e[1m本地图片路径:\e[22m \e[90m›\e[39m /Users/yokiijay/Code/pict\e7\e8\e[2K\e[G\e[2K\e[1G\e[36m?\e[39m \e[1m本地图片路径:\e[22m \e[90m›\e[39m /Users/yokiijay/Code/pictu\e7\e8\e[2K\e[G\e[2K\e[1G\e[36m?\e[39m \e[1m本地图片路径:\e[22m \e[90m›\e[39m /Users/yokiijay/Code/pictur\e7\e8\e[2K\e[G\e[2K\e[1G\e[36m?\e[39m \e[1m本地图片路径:\e[22m \e[90m›\e[39m /Users/yokiijay/Code/picture\e7\e8\e[2K\e[G\e[2K\e[1G\e[36m?\e[39m \e[1m本地图片路径:\e[22m \e[90m›\e[39m /Users/yokiijay/Code/picture-\e7\e8\e[2K\e[G\e[2K\e[1G\e[36m?\e[39m \e[1m本地图片路径:\e[22m \e[90m›\e[39m /Users/yokiijay/Code/picture-c\e7\e8\e[2K\e[G\e[2K\e[1G\e[36m?\e[39m \e[1m本地图片路径:\e[22m \e[90m›\e[39m /Users/yokiijay/Code/picture-cl\e7\e8\e[2K\e[G\e[2K\e[1G\e[36m?\e[39m \e[1m本地图片路径:\e[22m \e[90m›\e[39m /Users/yokiijay/Code/picture-cli\e7\e8\e[2K\e[G\e[2K\e[1G\e[36m?\e[39m \e[1m本地图片路径:\e[22m \e[90m›\e[39m /Users/yokiijay/Code/picture-cli/\e7\e8\e[2K\e[G\e[2K\e[1G\e[36m?\e[39m \e[1m本地图片路径:\e[22m \e[90m›\e[39m /Users/yokiijay/Code/picture-cli/d\e7\e8\e[2K\e[G\e[2K\e[1G\e[36m?\e[39m \e[1m本地图片路径:\e[22m \e[90m›\e[39m /Users/yokiijay/Code/picture-cli/de\e7\e8\e[2K\e[G\e[2K\e[1G\e[36m?\e[39m \e[1m本地图片路径:\e[22m \e[90m›\e[39m /Users/yokiijay/Code/picture-cli/dem\e7\e8\e[2K\e[G\e[2K\e[1G\e[36m?\e[39m \e[1m本地图片路径:\e[22m \e[90m›\e[39m /Users/yokiijay/Code/picture-cli/demo\e7\e8\e[2K\e[G\e[2K\e[1G\e[36m?\e[39m \e[1m本地图片路径:\e[22m \e[90m›\e[39m /Users/yokiijay/Code/picture-cli/demo-\e7\e8\e[2K\e[G\e[2K\e[1G\e[36m?\e[39m \e[1m本地图片路径:\e[22m \e[90m›\e[39m /Users/yokiijay/Code/picture-cli/demo-i\e7\e8\e[2K\e[G\e[2K\e[1G\e[36m?\e[39m \e[1m本地图片路径:\e[22m \e[90m›\e[39m /Users/yokiijay/Code/picture-cli/demo-im\e7\e8\e[2K\e[G\e[2K\e[1G\e[36m?\e[39m \e[1m本地图片路径:\e[22m \e[90m›\e[39m /Users/yokiijay/Code/picture-cli/demo-img\e7\e8\e[2K\e[G\e[2K\e[1G\e[36m?\e[39m \e[1m本地图片路径:\e[22m \e[90m›\e[39m /Users/yokiijay/Code/picture-cli/demo-img.\e7\e8\e[2K\e[G\e[2K\e[1G\e[36m?\e[39m \e[1m本地图片路径:\e[22m \e[90m›\e[39m /Users/yokiijay/Code/picture-cli/demo-img.j\e7\e8\e[2K\e[G\e[2K\e[1G\e[36m?\e[39m \e[1m本地图片路径:\e[22m \e[90m›\e[39m /Users/yokiijay/Code/picture-cli/demo-img.jp\e7\e8\e[2K\e[G\e[2K\e[1G\e[36m?\e[39m \e[1m本地图片路径:\e[22m \e[90m›\e[39m /Users/yokiijay/Code/picture-cli/demo-img.jpg\e7\e8"
+  - delay: 1603
+    content: "\e[2K\e[G\e[2K\e[1G\e[32m✔\e[39m \e[1m本地图片路径:\e[22m \e[90m…\e[39m /Users/yokiijay/Code/picture-cli/demo-img.jpg\e7\e8\r\n\e[?25h\e[1;1H\e[0J\e[?25l\e[36m⠋\e[39m \U0001F375 上传中，马上好..."
+  - delay: 87
+    content: "\e[2K\e[1G\e[36m⠙\e[39m \U0001F375 上传中，马上好..."
+  - delay: 85
+    content: "\e[2K\e[1G\e[36m⠹\e[39m \U0001F375 上传中，马上好..."
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠸\e[39m \U0001F375 上传中，马上好..."
+  - delay: 84
+    content: "\e[2K\e[1G\e[36m⠼\e[39m \U0001F375 上传中，马上好..."
+  - delay: 83
+    content: "\e[2K\e[1G\e[36m⠴\e[39m \U0001F375 上传中，马上好..."
+  - delay: 82
+    content: "\e[2K\e[1G\e[36m⠦\e[39m \U0001F375 上传中，马上好..."
+  - delay: 86
+    content: "\e[2K\e[1G\e[36m⠧\e[39m \U0001F375 上传中，马上好..."
+  - delay: 83
+    content: "\e[2K\e[1G\e[36m⠇\e[39m \U0001F375 上传中，马上好..."
+  - delay: 82
+    content: "\e[2K\e[1G\e[36m⠏\e[39m \U0001F375 上传中，马上好..."
+  - delay: 85
+    content: "\e[2K\e[1G\e[36m⠋\e[39m \U0001F375 上传中，马上好..."
+  - delay: 83
+    content: "\e[2K\e[1G\e[36m⠙\e[39m \U0001F375 上传中，马上好..."
+  - delay: 83
+    content: "\e[2K\e[1G\e[36m⠹\e[39m \U0001F375 上传中，马上好..."
+  - delay: 84
+    content: "\e[2K\e[1G\e[36m⠸\e[39m \U0001F375 上传中，马上好..."
+  - delay: 84
+    content: "\e[2K\e[1G\e[36m⠼\e[39m \U0001F375 上传中，马上好..."
+  - delay: 82
+    content: "\e[2K\e[1G\e[36m⠴\e[39m \U0001F375 上传中，马上好..."
+  - delay: 84
+    content: "\e[2K\e[1G\e[36m⠦\e[39m \U0001F375 上传中，马上好..."
+  - delay: 84
+    content: "\e[2K\e[1G\e[36m⠧\e[39m \U0001F375 上传中，马上好..."
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠇\e[39m \U0001F375 上传中，马上好..."
+  - delay: 85
+    content: "\e[2K\e[1G\e[36m⠏\e[39m \U0001F375 上传中，马上好..."
+  - delay: 84
+    content: "\e[2K\e[1G\e[36m⠋\e[39m \U0001F375 上传中，马上好..."
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠙\e[39m \U0001F375 上传中，马上好..."
+  - delay: 83
+    content: "\e[2K\e[1G\e[36m⠹\e[39m \U0001F375 上传中，马上好..."
+  - delay: 82
+    content: "\e[2K\e[1G\e[36m⠸\e[39m \U0001F375 上传中，马上好..."
+  - delay: 85
+    content: "\e[2K\e[1G\e[36m⠼\e[39m \U0001F375 上传中，马上好..."
+  - delay: 84
+    content: "\e[2K\e[1G\e[36m⠴\e[39m \U0001F375 上传中，马上好..."
+  - delay: 86
+    content: "\e[2K\e[1G\e[36m⠦\e[39m \U0001F375 上传中，马上好..."
+  - delay: 83
+    content: "\e[2K\e[1G\e[36m⠧\e[39m \U0001F375 上传中，马上好..."
+  - delay: 83
+    content: "\e[2K\e[1G\e[36m⠇\e[39m \U0001F375 上传中，马上好..."
+  - delay: 84
+    content: "\e[2K\e[1G\e[36m⠏\e[39m \U0001F375 上传中，马上好..."
+  - delay: 84
+    content: "\e[2K\e[1G\e[36m⠋\e[39m \U0001F375 上传中，马上好..."
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠙\e[39m \U0001F375 上传中，马上好..."
+  - delay: 83
+    content: "\e[2K\e[1G\e[36m⠹\e[39m \U0001F375 上传中，马上好..."
+  - delay: 82
+    content: "\e[2K\e[1G\e[36m⠸\e[39m \U0001F375 上传中，马上好..."
+  - delay: 84
+    content: "\e[2K\e[1G\e[36m⠼\e[39m \U0001F375 上传中，马上好..."
+  - delay: 84
+    content: "\e[2K\e[1G\e[36m⠴\e[39m \U0001F375 上传中，马上好..."
+  - delay: 85
+    content: "\e[2K\e[1G\e[36m⠦\e[39m \U0001F375 上传中，马上好..."
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠧\e[39m \U0001F375 上传中，马上好..."
+  - delay: 85
+    content: "\e[2K\e[1G\e[36m⠇\e[39m \U0001F375 上传中，马上好..."
+  - delay: 85
+    content: "\e[2K\e[1G\e[36m⠏\e[39m \U0001F375 上传中，马上好..."
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠋\e[39m \U0001F375 上传中，马上好..."
+  - delay: 85
+    content: "\e[2K\e[1G\e[36m⠙\e[39m \U0001F375 上传中，马上好..."
+  - delay: 85
+    content: "\e[2K\e[1G\e[36m⠹\e[39m \U0001F375 上传中，马上好..."
+  - delay: 80
+    content: "\e[2K\e[1G\e[36m⠸\e[39m \U0001F375 上传中，马上好..."
+  - delay: 85
+    content: "\e[2K\e[1G\e[36m⠼\e[39m \U0001F375 上传中，马上好..."
+  - delay: 85
+    content: "\e[2K\e[1G\e[36m⠴\e[39m \U0001F375 上传中，马上好..."
+  - delay: 84
+    content: "\e[2K\e[1G\e[36m⠦\e[39m \U0001F375 上传中，马上好..."
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠧\e[39m \U0001F375 上传中，马上好..."
+  - delay: 83
+    content: "\e[2K\e[1G\e[36m⠇\e[39m \U0001F375 上传中，马上好..."
+  - delay: 81
+    content: "\e[2K\e[1G\e[36m⠏\e[39m \U0001F375 上传中，马上好..."
+  - delay: 77
+    content: "\e[2K\e[1G\e[?25h"
+  - delay: 38
+    content: "\e[32m\U0001F389 \e[39m \e[32m\e[4m成功\e[24m       \e[39m 已上传并拷贝图片链接到剪切板 URL：\e[36m\e[7mhttps://i.loli.net/2020/06/01/crRj9O1YtF2ypwf.jpg\e[27m\e[39m\r\n\e[?25h"
+  - delay: 15
+    content: "\e]2;yokiijay@Macbook: ~/Code/picture-cli\a\e]1;..e/picture-cli\a"
+  - delay: 35
+    content: "\r\e[0m\e[27m\e[24m\e[J \e[36mpicture-cli\e[00m \e[01;34m\e[31mmaster\e[34m \e[33m✗\e[00m \e[01;32m➜ \e[K\e[?1h\e=\e[?2004h"
+  - delay: 2865
+    content: "\e[?2004l\r\r\n"

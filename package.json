@@ -2,7 +2,7 @@
   "name": "picture-cli",
   "version": "0.0.3",
   "main": "src/app.js",
-  "description": "A generator for random picture",
+  "description": "A powerful user-friendly image processing tool: random generate imgs, upload imgs online, edit imgs, etc...",
   "author": "Yokiijay <yokiijay@gmail.com> (https://yokiijay.github.io)",
   "homepage": "https://github.com/yokiijay",
   "repository": {
@@ -39,6 +39,7 @@
     "configstore": "^5.0.1",
     "enquirer": "^2.3.5",
     "form-data": "^3.0.0",
+    "fs-extra": "^9.0.0",
     "node-fetch": "^2.6.0",
     "ora": "^4.0.4",
     "prompts": "^2.3.2",
