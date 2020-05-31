@@ -1,47 +1,24 @@
-#!/usr/bin/env node
-const { program } = require('commander')
-const fetch = require('node-fetch')
 const chalk = require('chalk')
 const prompts = require('prompts')
 const signale = require('signale')
 const ora = require('ora')
 const clipboardy = require('clipboardy')
-const configstore = require('configstore')
-
-program.version('0.0.1', '-v --vers', '打印当前版本')
-program.description('一个随机图片生成器')
-
-
-/** Usage:
- * pic
- * 你想要多少图片 10
- * 图片的宽度
- * 图片的高度
- */
-program
-  .option('set delay <ms>', 'set the delay of each generation')
-
-program.parse(process.argv)
-// if(program.args.length){
-//   const [] = program.args
-// }
-
-if(!program.args.length) question()
+const isZh = require('../utils/isZh')
 
 async function question(){
   const ans = await prompts([
     {
       type: 'number',
       name: 'count',
-      message: 'How many pictures you need?',
+      message: isZh ? '你需要多少图片？一百万个都可以噢~':'How many pictures you need?',
       initial: 1,
       min: 1
     },
     {
       type: 'number',
       name: 'width',
-      message: "Width:",
-      initial: `input number or 'enter' to skip`,
+      message: isZh ? '宽度：':'Width:',
+      initial: isZh ? `输入数值，或回车键略过`:`input number or 'enter' to skip`,
       format: val => isNaN(val) ? null : val,
       onState(state){
         if(state.value === -Infinity || isNaN(state.value) ){
@@ -53,8 +30,8 @@ async function question(){
     {
       type: 'number',
       name: 'height',
-      message: "Height:",
-      initial: `input number or 'enter' to skip`,
+      message:  isZh ? '高度：':"Height:",
+      initial: isZh ? `输入数值，或回车键略过`:`input number or 'enter' to skip`,
       format: val => isNaN(val) ? null : val,
       onState(state){
         if(state.value === -Infinity || isNaN(state.value) ){
@@ -97,7 +74,7 @@ async function fetchPictures(count, width, height){
 
         pictures.shift()
         clipboardy.writeSync(JSON.stringify(pictures))
-        return signale.success(`🌈 Saved to clipboard 🌈 `)
+        return signale.success(isZh?`🌈 已保存到剪切板 🌈`:`🌈 Saved to clipboard 🌈`)
       }
     } catch (err) { i-- }
 
@@ -122,15 +99,15 @@ async function generatePictures(count, width, height){
 
   const handleEnd = async()=>{
     spinner.stop()
-    signale.success(`🌈🌈 All ${urls.length} pictures loaded!`)
+    signale.success(isZh?`🌈🌈 ${urls.length} 张图片都获取完毕！\n`:`🌈🌈 All ${urls.length} pictures loaded!\n`)
     const ans = await prompts([
       {
         type: 'select',
         name: 'method',
-        message: 'Copy to clipboard as',
+        message: isZh?'拷贝格式为':'Copy to clipboard as',
         choices: [
-          { title: 'Array', description: JSON.stringify(urls).slice(0,40)+'...', value: JSON.stringify(urls) },
-          { title: 'HTML Tag', description: urls.map(url=>`<li><img src="${url}" alt=""/></li>`).join('').slice(0,40)+'...', value: urls.map(url=>`<li><img src="${url}" alt=""/></li>\n`).join('') }
+          { title: isZh?'数组':'Array', description: JSON.stringify(urls).slice(0,40)+'...', value: JSON.stringify(urls) },
+          { title: isZh?'HTML标签':'HTML Tag', description: urls.map(url=>`<li><img src="${url}" alt=""/></li>`).join('').slice(0,40)+'...', value: urls.map(url=>`<li><img src="${url}" alt=""/></li>\n`).join('') }
         ]
       }
     ])
@@ -175,3 +152,5 @@ function delay(ms){
     }, ms)
   })
 }
+
+module.exports = question

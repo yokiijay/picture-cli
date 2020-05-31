@@ -22,23 +22,27 @@
   ],
   "license": "MIT",
   "files": [
-    "src/*"
+    "src/*",
+    "bin"
   ],
   "bin": {
-    "picture": "./src/app.js"
+    "picture": "./bin/app.js"
   },
   "scripts": {
-    "start": "node ./src/app.js"
+    "start": "node ./bin/app.js"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "chalk": "^4.0.0",
     "clipboardy": "^2.3.0",
     "commander": "^5.1.0",
     "configstore": "^5.0.1",
     "enquirer": "^2.3.5",
+    "form-data": "^3.0.0",
     "node-fetch": "^2.6.0",
     "ora": "^4.0.4",
     "prompts": "^2.3.2",
-    "signale": "^1.4.0"
+    "signale": "^1.4.0",
+    "yargs": "^15.3.1"
   }
 }
