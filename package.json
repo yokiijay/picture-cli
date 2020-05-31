@@ -1,6 +1,6 @@
 {
   "name": "picture-cli",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "main": "src/app.js",
   "description": "A powerful user-friendly image processing tool: random generate imgs, upload imgs online, edit imgs, etc...",
   "author": "Yokiijay <yokiijay@gmail.com> (https://yokiijay.github.io)",
