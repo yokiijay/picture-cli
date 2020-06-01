@@ -37,8 +37,8 @@ argv._.length && yargs.showHelp() && process.exit()
       name: 'action',
       message: 'Choose one to use'.zh('选择一个功能'),
       choices: [
-        {title: 'Generate random pictures'.zh('随机生成图片'), value: 'generate'},
-        {title: 'Upload picture online'.zh('上传图片到线上'), value: 'upload', description: 'input picture src then will upload and return an online url'.zh('上传后返回一个线上的URL')},
+        {title: '🎲 Generate random pictures'.zh('🎲 随机生成图片'), value: 'generate'},
+        {title: '🌐 Upload picture online'.zh('🌐 上传图片到线上'), value: 'upload', description: 'input picture src then will upload and return an online url'.zh('上传后返回一个线上的URL')},
       ],
       initial: config.get('choose') || 0
     }
