@@ -1,4 +1,4 @@
-# picture-cli -- img upload is coming in v 0.1.0
+# picture-cli -- img upload is coming in v 0.1.X
 
 [![Latest Stable Version](https://img.shields.io/npm/v/picture-cli.svg)](https://www.npmjs.com/package/picture-cli)
 
