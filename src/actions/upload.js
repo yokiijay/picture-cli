@@ -23,13 +23,17 @@ const signale = new Signale({
   }
 })
 
-const httpPromise = (url)=>{
-  const request = url.includes('https') ? https : http
-  return new Promise(resolve=>{
-    request.request(url, res=>{
-      resolve(res)
-    })
-  })
+// const httpPromise = (url)=>{
+//   const request = url.includes('https') ? https : http
+//   return new Promise(resolve=>{
+//     request.request(url, res=>{
+//       resolve(res)
+//     })
+//   })
+// }
+
+const formatPath = (path='')=>{
+  return path.replace(/(\'|\")/g,'').trim()
 }
 
 const upload = async ()=>{
@@ -38,13 +42,15 @@ const upload = async ()=>{
       type: 'text',
       name: 'path',
       message: 'Local image filepath:'.zh('本地图片路径:'),
-      format(val){
-        return val.replace(/(\'|\")/g,'')
+      onState(state){
+        this.rendered = formatPath(state.value)
+        this._value = formatPath(state.value)
       }
-      // onRender(val){
-      //   // console.log( 'val',val )
-      //   console.log( this.rendered )
-      // }
+    }, {
+      onCancel(){
+        console.clear()
+        process.exit()
+      }
     })
 
     // 如果路径不存在则抛出错误
@@ -63,9 +69,6 @@ const upload = async ()=>{
       headers: {
         'Authorization': API_TOKEN,
         ...form.getHeaders()
-      },
-      onUploadProgress: (progressEvent)=>{
-        console.log( progressEvent )
       },
       data: form
     })

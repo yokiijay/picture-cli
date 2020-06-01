@@ -40,7 +40,12 @@ async function question(){
         }
       }
     },
-  ])
+  ],{
+    onCancel(){
+      console.clear()
+      process.exit()
+    }}
+  )
 
   const { count, width, height } = ans
 

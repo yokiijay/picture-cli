@@ -8,7 +8,7 @@ const {name,version,description} = require('../package.json')
 const upload = require('../src/actions/upload')
 
 // 退出事件
-process.on('SIGINT', ()=>{
+process.on('SIGINT', function () {
   process.exit()
 })
 
@@ -30,6 +30,7 @@ argv._.length && yargs.showHelp() && process.exit()
 
 // 如果只输入了picture则进入程序
 {(async ()=>{
+
   const ans = await prompts([
     {
       type: 'select',
@@ -41,7 +42,12 @@ argv._.length && yargs.showHelp() && process.exit()
       ],
       initial: config.get('choose') || 0
     }
-  ])
+  ], {
+    onCancel(){
+      console.clear()
+      process.exit()
+    }
+  })
 
   // 选择功能
   switch(ans.action){
